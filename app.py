@@ -10,7 +10,6 @@ DATABASE_URL = os.environ.get('DATABASE_URL', 'sqlite:////tmp/flask_app.db')
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
 db = SQLAlchemy(app)
 
-
 class User(db.Model):
   id = db.Column(db.Integer, primary_key=True)
   name = db.Column(db.String(100))
